@@ -1,0 +1,8 @@
+{
+  "src/index.ts": {
+    "file": "geoStylerLegend.iife.js",
+    "name": "index",
+    "src": "src/index.ts",
+    "isEntry": true
+  }
+}
