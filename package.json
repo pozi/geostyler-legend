@@ -33,7 +33,7 @@
   "homepage": "https://github.com/geostyler/geostyler-legend#readme",
   "dependencies": {
     "@types/d3-selection": "^3.0.1",
-    "geostyler-openlayers-parser": "5.0.0"
+    "geostyler-openlayers-parser": "github:pozi/geostyler-openlayers-parser#dev-with-build"
   },
   "peerDependencies": {
     "d3": ">=6",
@@ -57,7 +57,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "extensionless": "^1.9.9",
-    "geostyler-style": "^9.2.0",
+    "geostyler-style": "github:pozi/geostyler-style#dev-with-build",
     "jsdom": "^24.1.0",
     "ol": "^9.1.0",
     "rimraf": "^3.0.2",
