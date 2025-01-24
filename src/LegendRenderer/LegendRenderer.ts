@@ -3,7 +3,6 @@ import OlGeometry from 'ol/geom/Geometry';
 import OlGeomPoint from 'ol/geom/Point';
 import OlGeomPolygon from 'ol/geom/Polygon';
 import OlGeomLineString from 'ol/geom/LineString';
-import OlStyle from 'ol/style/Style';
 import Renderer from 'ol/render/canvas/Immediate';
 import {
   isRule,
@@ -15,7 +14,7 @@ import {
   Symbolizer,
   Rule
 } from 'geostyler-style/dist/style';
-import OlStyleParser from 'geostyler-openlayers-parser/dist/OlStyleParser';
+import OlStyleParser, { OlParserStyleFct } from 'geostyler-openlayers-parser/dist/OlStyleParser';
 import OlFeature from 'ol/Feature';
 import SvgOutput from './SvgOutput';
 import AbstractOutput from './AbstractOutput';
@@ -197,10 +196,10 @@ export class LegendRenderer {
           reject(errors[0]);
         }
         if (typeof olStyle == 'function') {
-          olStyle = <OlStyle | OlStyle[]>olStyle(new OlFeature(geoms[0]), 1);
+          olStyle = <OlParserStyleFct>olStyle(new OlFeature(geoms[0]), 1);
         }
         if (Array.isArray(olStyle)) {
-          olStyle.forEach((styleItem: OlStyle) => {
+          olStyle.forEach((styleItem) => {
             renderer.setStyle(styleItem);
             drawGeoms();
           });

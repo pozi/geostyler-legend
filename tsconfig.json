@@ -14,7 +14,10 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDirs": [
+      "./src",
+      "../geostyler-openlayers-parser/src"
+    ],
     "sourceMap": true,
     "strictNullChecks": true,
     "target": "ES2022",
