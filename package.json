@@ -7,7 +7,6 @@
   "scripts": {
     "prerelease": "npm run build",
     "lint": "eslint -c .eslintrc.cjs --ext .ts . && tsc --noEmit --project tsconfig.json",
-    "test": "NODE_OPTIONS=--import=extensionless/register vitest run --coverage",
     "test:watch": "NODE_OPTIONS=--import=extensionless/register vitest",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "clean:dist": "rimraf ./dist/*",
@@ -31,7 +30,7 @@
   "homepage": "https://github.com/geostyler/geostyler-legend#readme",
   "dependencies": {
     "@types/d3-selection": "^3.0.1",
-    "geostyler-openlayers-parser": "github:pozi/geostyler-openlayers-parser#v1.0.4"
+    "geostyler-openlayers-parser": "github:pozi/geostyler-openlayers-parser#v1.0.5"
   },
   "peerDependencies": {
     "d3": ">=6",
@@ -55,7 +54,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "extensionless": "^1.9.9",
-    "geostyler-style": "github:pozi/geostyler-style#v1.0.2",
+    "geostyler-style": "github:pozi/geostyler-style#v1.0.3",
     "jsdom": "^24.1.0",
     "ol": "^10.2.1",
     "rimraf": "^3.0.2",
